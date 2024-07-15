@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "EPN06lWhtENZ2VC8t4nLH4XRQania7AMkDp0BRHTBfnpaPnJbdoQI9wGZqsPF0ugbcDBv0T4qi7+Hq6PO/Nk0g==",
+  "success": true,
+  "projectFilePath": "E:\\Full Stack Route!\\Projects\\Task Management System\\Task Management System.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\ALTHOURAYA\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.28\\microsoft.windowsdesktop.app.ref.6.0.28.nupkg.sha512",
+    "C:\\Users\\ALTHOURAYA\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.28\\microsoft.netcore.app.ref.6.0.28.nupkg.sha512",
+    "C:\\Users\\ALTHOURAYA\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.28\\microsoft.aspnetcore.app.ref.6.0.28.nupkg.sha512",
+    "C:\\Users\\ALTHOURAYA\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\6.0.28\\microsoft.netcore.app.host.win-x64.6.0.28.nupkg.sha512"
+  ],
+  "logs": []
+}
