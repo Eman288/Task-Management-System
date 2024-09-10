@@ -2,7 +2,7 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Task_Management_System.Models
+namespace TaskManagementSystem.Models
 {
     public class User
     {
@@ -20,9 +20,10 @@ namespace Task_Management_System.Models
         public string UserName { get; set; } = string.Empty;
 
         [Required]
-        [StringLength(100, MinimumLength = 6)]
+        [RegularExpression("^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d).+$", ErrorMessage = "The password must contain at least one lowercase letter, one uppercase letter, and one digit.")]
         [DataType(DataType.Password)]
         public string UserPassword { get; set; } = string.Empty;
+
 
         [Display(Name = "Pomodoro")]
         [Column(TypeName = "int")]

@@ -1,0 +1,54 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model TaskManagementSystem.Models.User
+
+<form asp-controller="Registration" asp-action="Register" method="post" class="container regform">
+    <div class="row">
+        <div class="col-4">
+            <label for="UserName">Name</label>
+        </div>
+        <div class="col-8">
+            <input id="UserName" name="UserName" class="col-xs-6" type="text" required placeholder="Enter Your Name" value="@Model.UserName" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-4">
+            <label for="UserEmail">Email</label>
+        </div>
+        <div class="col-8">
+            <input id="UserEmail" name="UserEmail" class="col-xs-6" type="email" required placeholder="Enter Your Email" value="@Model.UserEmail" />
+            <span asp-validation-for="UserEmail" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-4">
+            <label for="UserPassword">Password</label>
+        </div>
+        <div class="col-8">
+            <input id="UserPassword" name="UserPassword" class="col-xs-6" type="password" required placeholder="Enter Your Password" value="@Model.UserPassword" />
+            <span asp-validation-for="UserPassword" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-4">
+            <label for="ConfirmedPassword">Config Password</label>
+        </div>
+        <div class="col-8">
+            <input id="ConfirmedPassword" name="ConfirmedPassword" class="col-xs-6" type="password" required placeholder="Enter Your Password Again" />
+            @if (ViewData["ConfirmedPassword"] != null)
+            {
+                <span class="text-danger">@ViewData["ConfirmedPassword"]</span>
+            }
+        </div>
+    </div>
+    
+    <div class="row formbelow">
+        <a href="#">Sign in</a>
+        <button type="submit">Sign Up</button>
+    </div>
+</form>
+
+

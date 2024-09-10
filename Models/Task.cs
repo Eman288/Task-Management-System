@@ -2,14 +2,13 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Task_Management_System.Models
+namespace TaskManagementSystem.Models
 {
     public class Task
     {
         [Key]
         [Display(Name = "Task ID")]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int TaskID { get; set; }
+        public int TaskID { get; set; } = 0;
 
         [Required]
         [Display(Name = "Task Name")]
@@ -18,7 +17,7 @@ namespace Task_Management_System.Models
 
         [Display(Name = "Task Color")]
         [Column(TypeName = "varchar(10)")]
-        public string TaskColor = "#000";
+        public string TaskColor { get; set; } = "#000";
 
         [Column(TypeName = "int")]
         [Display(Name = "Task Priority")]
@@ -34,14 +33,13 @@ namespace Task_Management_System.Models
 
         [Display(Name = "Start Date")]
         [DataType(DataType.Date)]
-        public DateTime? TaskStartDate { get; set; } // set manually to the created date if the user didn't enter it
+        public DateTime? TaskStartDate { get; set; }
 
         [Display(Name = "End Date")]
         [DataType(DataType.Date)]
-        public DateTime? TaskEndDate { get; set; } = null;
+        public DateTime? TaskEndDate { get; set; }
 
         [Display(Name = "Task Total Time")]
-        [DataType(DataType.Date)]
         public int TaskTotalTime { get; set; } = 0;
     }
 }

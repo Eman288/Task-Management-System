@@ -1,10 +1,12 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-namespace Task_Management_System.Models
+
+namespace TaskManagementSystem.Models
 {
     public class Project
     {
+
         [Key]
         [Display(Name = "Project ID")]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
